@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1605161233
+      author: Aleksey Nosov
+      comment: Create appartment table
+      changes:
+        - createTable:
+            tableName: appartment
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: house_number
+                  type: integer
+                  remarks: Номер дома
+              - column:
+                  name: flat_number
+                  type: integer
+                  remarks: Номер квартиры
+              - column:
+                  name: floor
+                  type: integer
+                  remarks: Этаж
+              - column:
+                  name: gate
+                  type: integer
+                  remarks: Номер подъезда
+              - column:
+                  name: house_building
+                  type: integer
+                  remarks: Корпус
+              - column:
+                  name: area
+                  type: real
+                  remarks: Площадь
+              - column:
+                  name: room_count
+                  type: integer
+                  remarks: Количество комнат

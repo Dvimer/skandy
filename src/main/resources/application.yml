@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  servlet:
+    session:
+      timeout: 24h
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/local_appartment
+    username: postgres
+    password: postgres
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 10
+      minimum-idle: 1
+      login-timeout: 1000
